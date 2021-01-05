@@ -14,7 +14,7 @@ PERN stack
    1. Database: Postgres
    2. Backend: NodeJS
    3. Middleware: ExpressJS
-   4. Frontent: REACT + REDUX
+   4. Frontend: REACT + REDUX
 
 ## API's 
 
