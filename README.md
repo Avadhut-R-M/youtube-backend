@@ -40,4 +40,4 @@ POST:
 
 ## Model diagram
 [https://dbdiagram.io/d/5ff3f66080d742080a350d22](https://dbdiagram.io/d/5ff3f66080d742080a350d22)
-[]
+![model diagram](/extras/modeldiagram.png)
