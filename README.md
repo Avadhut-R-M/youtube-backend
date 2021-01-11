@@ -38,6 +38,3 @@ POST:
 * /videos/UUID/like
 * /videos/UUID/dislike
 
-## Model diagram
-
-![model diagram](/extras/modeldiagram.png)
