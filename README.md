@@ -13,14 +13,33 @@
 PERN stack
    * Database: Postgres
    * Backend: NodeJS
-   * Middleware: ExpressJS
+   * Rest Framework: ExpressJS + Sequelize
    * Frontend: REACT + REDUX
 
 ### Project Tech Stack
 
    * Frontend: REACT + REDUX
-   * Backend: Django Rest Framework
+   * Backend: Django
+   * Rest Framework: Django Rest Framework
    * Database: Postgres
+
+## User Stories
+
+* Create a new account by going to the Signup page
+* Existing users can login using their credentials
+* Home page: Contains all the videos with the latest videos at the top
+* Trending: Videos that are most trending(most viewed) show up at the top here
+* Subscriptions: If you have not subscribed to any channels, you get a list of recommendations for channels, else you get the videos of your subscribed channels
+* Liked videos: If you liked any videos, they show up here
+* History: Just the videos you watched
+* Library: Collection of history and liked videos
+* Profile: Contains 4 sections
+    * Videos: All the videos that you uploaded
+    * Channels: Contains the channels you have subscribed to
+    * About: Your description of your channel
+    * Edit profile: Change your description, user details and add cover pic and profile pic. If you are not the owner of the profile, this changes to subscribe or unsubscribe. 
+* Upload video: Upload your own videos so that others can enjoy it
+* Logout
 
 ## API's 
 
@@ -54,4 +73,8 @@ POST:
 PUT:
 
 * /users
+
+## Model diagram
+
+![model diagram](/extras/modeldiagram.png)
 
