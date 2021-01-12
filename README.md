@@ -8,25 +8,40 @@
 
    [youtubeclone-backend](https://github.com/manikandanraji/youtubeclone-backend)
 
-### Tech Stack
+### Source Tech Stack
 
 PERN stack
-   1. Database: Postgres
-   2. Backend: NodeJS
-   3. Middleware: ExpressJS
-   4. Frontend: REACT + REDUX
+   * Database: Postgres
+   * Backend: NodeJS
+   * Middleware: ExpressJS
+   * Frontend: REACT + REDUX
+
+### Project Tech Stack
+
+   * Frontend: REACT + REDUX
+   * Backend: Django Rest Framework
+   * Database: Postgres
 
 ## API's 
 
 Get:
 
+* /auth/me
 * /videos
+* /videos/search
+* /videos/UUID
+* /videos/UUID/view
+* /videos/UUID/like
+* /videos/UUID/dislike
 * /users
+* /users/search
 * /users/feed
 * /users/history
 * /users/likedvideos
 * /users/UUID
 * /users/UUID/togglesubscribe
+* cloudinary
+
 
 POST:
 
@@ -35,8 +50,10 @@ POST:
 * cloudinary
 * /videos
 * /videos/UUID/comment
-* /videos/UUID/like
-* /videos/UUID/dislike
+
+PUT:
+
+* /users
 
 ## Model diagram
 
