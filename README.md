@@ -74,7 +74,4 @@ PUT:
 
 * /users
 
-## Model diagram
-
-![model diagram](/extras/modeldiagram.png)
 
