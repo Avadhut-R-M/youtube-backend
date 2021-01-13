@@ -1,8 +1,8 @@
 # Group 4 - Capstone-Project
 
-## Source Project
+## Youtube clone
 
-### Youtube clone
+### Source Project
    
    [youtubeclone-frontend](https://github.com/manikandanraji/youtubeclone-frontend)
 
