@@ -11,7 +11,6 @@
 ### Source Tech Stack
 
 PERN stack
-   * Database: Postgres
    * Backend: NodeJS
    * Rest Framework: ExpressJS + Sequelize
    * Frontend: REACT + REDUX
