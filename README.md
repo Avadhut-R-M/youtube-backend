@@ -1,8 +1,8 @@
 # Group 4 - Capstone-Project
 
-## Source Project
+## Youtube clone
 
-### Youtube clone
+### Source Project
    
    [youtubeclone-frontend](https://github.com/manikandanraji/youtubeclone-frontend)
 
@@ -11,7 +11,6 @@
 ### Source Tech Stack
 
 PERN stack
-   * Database: Postgres
    * Backend: NodeJS
    * Rest Framework: ExpressJS + Sequelize
    * Frontend: REACT + REDUX
@@ -74,7 +73,4 @@ PUT:
 
 * /users
 
-## Model diagram
-
-![model diagram](/extras/modeldiagram.png)
 
