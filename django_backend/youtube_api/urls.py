@@ -3,11 +3,15 @@ from .views import (user_signup, user_login_auth, me, videos,
                     feed, history, user_details, liked_videos,
                     toggle_subscribe, toggle_like, toggle_dislike,
                     user_update, videos_details, comment_view,
-                    search_user, search_video, video_viewed_or_not)
+                    search_user, search_video, video_viewed_or_not,
+                    ReactAppView)
 from django.views.decorators.csrf import csrf_exempt
 
 
 urlpatterns = [
+    # React view
+    path('', ReactAppView.as_view()),
+    # authentication views
     path('auth/signup', csrf_exempt(user_signup), name='signup'),
     path('auth/login', csrf_exempt(user_login_auth), name='login'),
     path('auth/me', csrf_exempt(me), name='me'),

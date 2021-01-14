@@ -136,7 +136,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
+STATICFILES_DIRS = [
+    os.path.join(os.path.join(os.path.join(BASE_DIR, 'frontend'), 'build'), 'static')]
+REACT_APP = (
+    os.path.join(BASE_DIR, 'frontend')
+)
 # Custom settings
 
 AUTH_USER_MODEL = 'youtube_api.User'

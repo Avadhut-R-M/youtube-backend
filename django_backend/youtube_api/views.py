@@ -36,6 +36,31 @@ from django.db.models import (
 from django.contrib.auth.hashers import (
     make_password,
     check_password)
+from django.views.generic import View as ReactView
+from django.http import HttpResponse
+from django.conf import settings
+import os
+
+
+class ReactAppView(ReactView):
+    '''
+    To serve the react app
+    '''
+
+    def get(self, request):
+        try:
+            with open(os.path.join(
+                settings.REACT_APP, 'build', 'index.html'
+            )) as file:
+                return HttpResponse(file.read())
+
+        except FileNotFoundError:
+            return HttpResponse(
+                """
+                index.html not found ! build your React app !!
+                """,
+                status=501,
+            )
 
 
 # we have not included signup with JWT authintication
@@ -43,6 +68,8 @@ from django.contrib.auth.hashers import (
 # API for auth/signup
 @api_view(['POST'])
 def user_signup(request):
+    ''' To create user account '''
+
     # Extracting User details from body
     firstname = request.data['firstname']
     lastname = request.data['lastname']
@@ -90,6 +117,9 @@ def user_signup(request):
 # API for auth/login
 @api_view(['POST'])
 def user_login_auth(request):
+    '''
+    Login the user from verified credentials
+    '''
 
     # Extracting email and password from request body
     email = request.data['email']
@@ -159,7 +189,9 @@ def me(request):
 @api_view(['PUT', 'GET'])
 @authentication_classes([SafeJWTAuthentication])
 def user_update(request):
-
+    '''
+    API to update user details from given data
+    '''
     # Extracting username from token
     username = get_username(request)
 

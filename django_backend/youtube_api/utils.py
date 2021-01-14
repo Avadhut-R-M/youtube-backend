@@ -4,6 +4,9 @@ from django.conf import settings
 
 
 def generate_access_token(user):
+    '''
+    generates the token for JWT auhentication
+    '''
 
     access_token_payload = {
         'user_name': user.username,
@@ -17,19 +20,11 @@ def generate_access_token(user):
     return access_token
 
 
-def generate_refresh_token(user):
-    refresh_token_payload = {
-        'user_name': user.username,
-        'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7),
-        'iat': datetime.datetime.utcnow()
-    }
-    refresh_token = jwt.encode(
-        refresh_token_payload, settings.SECRET_KEY, algorithm='HS256')
-
-    return refresh_token
-
-
 def token_decoder(token):
+    '''
+    Decodes the token to return the payload
+    '''
+
     # Removing Bearer flag from token
     access_token = token.split(' ')[1]
     # Decoding token
@@ -43,6 +38,10 @@ def token_decoder(token):
 
 # Extract username from JWT
 def get_username(request):
+    '''
+    returns the username from the payload
+    '''
+
     # Getting token from request object
     authorization_header = request.headers.get('Authorization')
     # Decoding token

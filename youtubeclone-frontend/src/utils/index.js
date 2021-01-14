@@ -32,6 +32,13 @@ export const client = async (endpoint, { body, ...customConfig } = {}) => {
     return toast(data.message);
   }
 
+  if (res.status === 403) {
+    toast('Login Expired please login again');
+    localStorage.removeItem("user");
+
+    window.location = "/";
+  }
+
   return data;
 };
 
